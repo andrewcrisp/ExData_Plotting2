@@ -6,8 +6,8 @@
 #						      This script will:
 #  					      1. Source the loadData.R script to load data.
 #  					      2. Demonstrate with Base graphics the total PM2.5 emissions
-#    				          from all sources for each of the years 1999, 2002, 2005,
-#    				          2008.
+#    				          from Baltimore City, Maryland for each of the years 1999,
+#    				          2002, 2005, 2008.
 #    				      
 ################################################################################
 ################################################################################
