@@ -30,10 +30,9 @@ totalPM25 <- interestingData %>%
   summarise_each(funs(sum))
 
 png("plot3.png", width=480, height=480)
-g <- ggplot(totalPM25, aes(x = year, y = Emissions))
-g <- g + geom_point() +
-        geom_smooth(method="lm") +
-        facet_grid(type ~ .) +
+g <- ggplot(totalPM25, aes(x = factor(year), y = Emissions, fill = factor(type)))
+g <- g + geom_bar(stat="identity", position = position_dodge()) +
+        scale_fill_discrete(name="Type") +
         labs(title = expression("Total " * PM[2.5] * " Emissions by Year per Type in Baltimore City, Maryland")) +
         labs(x = "year", y = expression("Total " * PM[2.5] * " Emissions")) +
         coord_cartesian(ylim = c(0,2500))
