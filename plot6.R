@@ -40,7 +40,6 @@ png("plot6.png", width=480, height=480)
 g <- ggplot(totalPM25, aes(x = factor(year), y = Emissions, fill = factor(fips)))
 g <- g + geom_bar(stat="identity", position = position_dodge()) + 
   scale_fill_discrete(name="Location", labels=c("LA County","Baltimore City")) +
-  #facet_grid(SCC.Level.Two ~ .) +
   labs(title = expression("Motor vehicle emissions, LA County vs Baltimore City")) +
   labs(x = "year", y = expression("Total " * PM[2.5] * " Emissions")) + 
   theme(legend.position = c(.85,.9))
