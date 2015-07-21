@@ -20,6 +20,7 @@ library(ggplot2)
 ### Load dataset
 ################################################################################
 source('loadData.R')
+options(scipen = 5)
 
 interestingData <- summaryData[which(summaryData$fips == "24510"), c(18,19,20)]
 

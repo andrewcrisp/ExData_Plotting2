@@ -19,6 +19,7 @@ library(dplyr)
 ### Load dataset
 ################################################################################
 source('loadData.R')
+options(scipen = 5)
 
 interestingData<-summaryData[,c(18,20)]
 
